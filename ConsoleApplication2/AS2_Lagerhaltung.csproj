@@ -7,7 +7,7 @@
     <ProjectGuid>{89E1AC21-059B-466C-B474-FD6D7D703A24}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication2</RootNamespace>
+    <RootNamespace>AS2_Lagerhaltung</RootNamespace>
     <AssemblyName>ConsoleApplication2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Artikel.cs" />
+    <Compile Include="Bestellposition.cs" />
+    <Compile Include="Bestellung.cs" />
+    <Compile Include="Lieferant.cs" />
+    <Compile Include="Lieferkondition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
