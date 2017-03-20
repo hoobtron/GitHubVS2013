@@ -14,5 +14,17 @@ namespace AS2_Lagerhaltung
         public double Ek_preis { get; set; }
         public string Frist { get; set; }
 
+        private List<Artikel> _artikel = new List<Artikel>();
+
+        public void ArtikelHinzufuegen(Artikel artikel)
+        {
+            _artikel.Add(Artikel);
+        }
+        
+        public void AlleArtikelEntfernen()
+        {
+            foreach (var artikel in _artikel)
+                _artikel.Remove(Artikel);
+        }
     }
 }

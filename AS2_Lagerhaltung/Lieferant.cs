@@ -16,10 +16,12 @@ namespace AS2_Lagerhaltung
         public string Tel_nr { get; set; }
 
         private List<Lieferkondition> _lieferkonditionen = new List<Lieferkondition>();
+
         public void LieferkonditionHinzufuegen(Lieferkondition lieferkondition)
         {
             _lieferkonditionen.Add(lieferkondition);
         }
+
         public void LieferkonditionenEntfernen()
         {
             foreach (var lieferkondition in _lieferkonditionen)
