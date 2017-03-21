@@ -15,6 +15,7 @@ namespace AS2_Lagerhaltung
         public string Adresse { get; set; }
         public string Tel_nr { get; set; }
 
+        // 1 Lieferant -> * Lieferkonditionen
         private List<Lieferkondition> _lieferkonditionen = new List<Lieferkondition>();
 
         public void LieferkonditionHinzufuegen(Lieferkondition lieferkondition)
@@ -22,7 +23,7 @@ namespace AS2_Lagerhaltung
             _lieferkonditionen.Add(lieferkondition);
         }
 
-        public void LieferkonditionenEntfernen()
+        public void AlleLieferkonditionenEntfernen()
         {
             foreach (var lieferkondition in _lieferkonditionen)
                 _lieferkonditionen.Remove(lieferkondition);
