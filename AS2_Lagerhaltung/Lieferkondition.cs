@@ -14,6 +14,10 @@ namespace AS2_Lagerhaltung
         public double Ek_preis { get; set; }
         public string Frist { get; set; }
 
+        public Lieferkonditionen()
+        {
+
+        }
         /* DELETE
          private List<Artikel> _artikel = new List<Artikel>();
 
@@ -21,7 +25,7 @@ namespace AS2_Lagerhaltung
         {
             _artikel.Add(artikel);
         }
-        
+
         public void AlleArtikelEntfernen()
         {
             foreach (var artikel in _artikel)
