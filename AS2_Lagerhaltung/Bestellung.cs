@@ -9,10 +9,9 @@ namespace AS2_Lagerhaltung
     class Bestellung
     {
         private static int anzahlAllerBestellungen = 0;
-        private long best_nr;
         private long datum;
 
-        public long Best_nr { get; private set; }
+        public long BestNr { get; private set; }
         public long Datum { get; set; }
 
         // 1 Bestellung -> * Bestellpositionen
@@ -21,9 +20,9 @@ namespace AS2_Lagerhaltung
         public Bestellung()
         {
             anzahlAllerBestellungen++;
-            Best_nr = anzahlAllerBestellungen;
+            BestNr = anzahlAllerBestellungen;
 
-            // TODO: Bestellposition schon direkt bei erzeugen der Bestellung anlegen?
+            // TODO: Bestellposition schon direkt bei Erzeugen der Bestellung anlegen?
             NeueBestellposition();
         }
 
@@ -34,7 +33,7 @@ namespace AS2_Lagerhaltung
 
         public void NeueBestellposition()
         {
-            Bestellposition bestellposition = new Bestellposition();
+            var bestellposition = new Bestellposition();
             _bestellpositionen.Add(bestellposition);
         }
     }
