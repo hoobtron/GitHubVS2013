@@ -11,7 +11,7 @@ namespace AS2_Lagerhaltung
         private double ek_preis;
         private string frist;
 
-        public double Ek_preis { get; set; }
+        public double EkPreis { get; set; }
         public string Frist { get; set; }
 
         public Lieferkonditionen()

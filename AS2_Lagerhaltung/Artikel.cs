@@ -12,10 +12,10 @@ namespace AS2_Lagerhaltung
         private string bezeichung;
         private long bestand;
         private long min_bestand;
-        public long Artikel_nr { get; set; }
+        public long ArtikelNr { get; set; }
         public string Bezeichung { get; set; }
         public long Bestand { get; set; }
-        public long Min_bestand { get; set; }
+        public long MinBestand { get; set; }
 
         // 1 Artikel -> * Bestellpositionen
         private List<Bestellposition> _bestellpositionen = new List<Bestellposition>();

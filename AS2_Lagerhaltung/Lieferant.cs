@@ -13,7 +13,7 @@ namespace AS2_Lagerhaltung
         private string tel_nr;
         public string Name { get; set; }
         public string Adresse { get; set; }
-        public string Tel_nr { get; set; }
+        public string TelNr { get; set; }
 
         // 1 Lieferant -> * Lieferkonditionen
         private List<Lieferkondition> _lieferkonditionen = new List<Lieferkondition>();
