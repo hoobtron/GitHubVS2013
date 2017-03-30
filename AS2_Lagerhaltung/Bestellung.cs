@@ -44,20 +44,20 @@ namespace AS2_Lagerhaltung
         // ...
         public void NeueBestellposition()
         {
-            Bestellposition bestellposition = new Bestellposition();
-            this._bestellpositionen.Add(bestellposition);
+            var bestellposition = new Bestellposition();
+            _bestellpositionen.Add(bestellposition);
         }
 
         public void SetzeBestellpositionsAnzahl(int index, int anzahl)
         {
-            this._bestellpositionen[index].Anzahl = anzahl;
+            _bestellpositionen[index].Anzahl = anzahl;
         }
 
         // überladene Methode
         public void NeueBestellposition(int anzahl)
         {
-            this.NeueBestellposition();
-            this.SetzeBestellpositionsAnzahl(this._bestellpositionen.Count - 1, anzahl);
+            NeueBestellposition();
+            SetzeBestellpositionsAnzahl(_bestellpositionen.Count - 1, anzahl);
         }
     }
 }

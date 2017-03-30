@@ -60,10 +60,10 @@ namespace AS2_Lagerhaltung
             bestellpositionen[2].Anzahl = 10;
 
             //Komposition
-            Bestellung best1 = new Bestellung();
+            var best1 = new Bestellung();
             // statt best1.NeueBestellposition(); best1.SetzeBestellpositionsAnzahl(0, 8);
             best1.NeueBestellposition(8);
-            Bestellung best2 = new Bestellung();
+            var best2 = new Bestellung();
             best2.NeueBestellposition(5);
             best2.NeueBestellposition(10);
 
