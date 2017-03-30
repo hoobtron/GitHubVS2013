@@ -41,7 +41,12 @@ namespace AS2_Lagerhaltung
             return anzahlAllerBestellungen;
         }
 
-        // ...
+        public void BestellpositionHinzufuegen(Bestellposition bestellposition)
+        {
+            _bestellpositionen.Add(bestellposition);
+        }
+
+        // Methoden-Varianten...
         public void NeueBestellposition()
         {
             var bestellposition = new Bestellposition();

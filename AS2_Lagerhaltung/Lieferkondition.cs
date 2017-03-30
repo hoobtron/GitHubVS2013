@@ -9,28 +9,10 @@ namespace AS2_Lagerhaltung
     class Lieferkondition
     {
         private double ek_preis;
-        private string frist;
+        private int frist_tage;
 
         public double EkPreis { get; set; }
-        public string Frist { get; set; }
+        public int FristTage { get; set; }
 
-        public Lieferkonditionen()
-        {
-
-        }
-        /* DELETE
-         private List<Artikel> _artikel = new List<Artikel>();
-
-        public void ArtikelHinzufuegen(Artikel artikel)
-        {
-            _artikel.Add(artikel);
-        }
-
-        public void AlleArtikelEntfernen()
-        {
-            foreach (var artikel in _artikel)
-                _artikel.Remove(artikel);
-        }
-        */
     }
 }

@@ -15,7 +15,7 @@ namespace AS2_Lagerhaltung
             var lieferanten = new Lieferant[2];
             var lieferkonditionen = new Lieferkondition[4];
             var artikel = new Artikel[3];
-//            var bestellpositionen = new Bestellpositionen[3];
+            var bestellpositionen = new Bestellposition[3];
 
             // Arrays befüllen
             for (var i = 0; i < lieferanten.Length; i++)
@@ -29,14 +29,14 @@ namespace AS2_Lagerhaltung
 
             for (var i = 0; i < lieferkonditionen.Length; i++)
                 lieferkonditionen[i] = new Lieferkondition();
-            lieferkonditionen[0].Ek_preis = 2.70;
-            lieferkonditionen[0].Frist = 28;
-            lieferkonditionen[1].Ek_preis = 10;
-            lieferkonditionen[1].Frist = 14;
-            lieferkonditionen[2].Ek_preis = 12;
-            lieferkonditionen[2].Frist = 5;
-            lieferkonditionen[3].Ek_preis = 150;
-            lieferkonditionen[§].Frist = 14;
+            lieferkonditionen[0].EkPreis = 2.70;
+            lieferkonditionen[0].FristTage = 28;
+            lieferkonditionen[1].EkPreis = 10;
+            lieferkonditionen[1].FristTage = 14;
+            lieferkonditionen[2].EkPreis = 12;
+            lieferkonditionen[2].FristTage = 5;
+            lieferkonditionen[3].EkPreis = 150;
+            lieferkonditionen[3].FristTage = 14;
 
             for (var i = 0; i < artikel.Length; i++)
                 artikel[i] = new Artikel();
@@ -53,13 +53,13 @@ namespace AS2_Lagerhaltung
             artikel[2].Bestand = 5;
             artikel[2].Min_bestand = 5;
 
-//           for (var i = 0; i < bestellpositionen.Length; i++)
-//               bestellpositionen[i] = new Bestellpositionen();
+           for (var i = 0; i < bestellpositionen.Length; i++)
+               bestellpositionen[i] = new Bestellposition();
             bestellpositionen[0].Anzahl = 8;
             bestellpositionen[1].Anzahl = 5;
             bestellpositionen[2].Anzahl = 10;
 
-            //Komposition
+            // Umsetzungs-Variante 2 um Bestellpositionen-Liste zu füllen
             var best1 = new Bestellung();
             // statt best1.NeueBestellposition(); best1.SetzeBestellpositionsAnzahl(0, 8);
             best1.NeueBestellposition(8);
@@ -73,6 +73,8 @@ namespace AS2_Lagerhaltung
             lieferanten[1].LieferkonditionHinzufuegen(lieferkonditionen[2]);
             lieferanten[1].LieferkonditionHinzufuegen(lieferkonditionen[3]);
             //lieferanten[0].AlleLieferkonditionenEntfernen();
+            lieferanten[0].BestellungHinzufuegen(best1);
+            lieferanten[1].BestellungHinzufuegen(best2);
 
             artikel[0].LieferkonditionHinzufuegen(lieferkonditionen[0]);
             artikel[1].LieferkonditionHinzufuegen(lieferkonditionen[1]);
@@ -83,12 +85,6 @@ namespace AS2_Lagerhaltung
             artikel[1].BestellpositionHinzufuegen(bestellpositionen[0]);
             artikel[1].BestellpositionHinzufuegen(bestellpositionen[2]);
             artikel[2].BestellpositionHinzufuegen(bestellpositionen[1]);
-/*
-            lieferkonditionen[0].ArtikelHinzufuegen(artikel[0]);
-            lieferkonditionen[1].ArtikelHinzufuegen(artikel[2]);
-            lieferkonditionen[1].ArtikelHinzufuegen(artikel[1]);
-            lieferkonditionen[0].AlleArtikelEntfernen();
-*/
 
 
 

@@ -18,6 +18,14 @@ namespace AS2_Lagerhaltung
         // 1 Lieferant -> * Lieferkonditionen
         private List<Lieferkondition> _lieferkonditionen = new List<Lieferkondition>();
 
+        // 1 Lieferant -> * Lieferkonditionen
+        private List<Bestellung> _bestellungen = new List<Bestellung>();
+
+        public void BestellungHinzufuegen(Bestellung bestellung)
+        {
+            _bestellungen.Add(bestellung);
+        }
+
         public void LieferkonditionHinzufuegen(Lieferkondition lieferkondition)
         {
             _lieferkonditionen.Add(lieferkondition);
