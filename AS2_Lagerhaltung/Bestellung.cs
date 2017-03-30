@@ -16,7 +16,7 @@ namespace AS2_Lagerhaltung
         private DateTime datum;
 
         // Eigenschaften (extern nur lesbar)
-        public long Best_nr { get; private set; }
+        public long BestNr { get; private set; }
         public DateTime Datum { get; private set; }
 
         // 1 Bestellung -> * Bestellpositionen
@@ -29,7 +29,7 @@ namespace AS2_Lagerhaltung
             anzahlAllerBestellungen++;
 
             // Instanz-Variablen setzen
-            Best_nr = anzahlAllerBestellungen;
+            BestNr = anzahlAllerBestellungen;
             Datum = DateTime.Today;
 
             // TODO: ??? Bestellposition schon direkt beim Erzeugen der Bestellung anlegen?
