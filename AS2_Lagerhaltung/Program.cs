@@ -10,14 +10,18 @@ namespace AS2_Lagerhaltung
     {
         static void Main(string[] args)
         {
+            // Attribute
+            // Bestellungen erzeugen
+            var best1 = new Bestellung();
+            var best2 = new Bestellung();
 
-            // Arrays erzeugen (mit [n] items)
+            // Arrays für Daten erzeugen (mit [n] items)
             var lieferanten = new Lieferant[2];
             var lieferkonditionen = new Lieferkondition[4];
             var artikel = new Artikel[3];
             var bestellpositionen = new Bestellposition[3];
 
-            // Arrays befüllen
+            // Arrays mit Daten befüllen
             for (var i = 0; i < lieferanten.Length; i++)
                 lieferanten[i] = new Lieferant();
             lieferanten[0].Adresse = "Sonnenallee 195";
@@ -53,19 +57,18 @@ namespace AS2_Lagerhaltung
             artikel[2].Bestand = 5;
             artikel[2].MinBestand = 5;
 
-           for (var i = 0; i < bestellpositionen.Length; i++)
-               bestellpositionen[i] = new Bestellposition();
+            for (var i = 0; i < bestellpositionen.Length; i++)
+                bestellpositionen[i] = new Bestellposition();
             bestellpositionen[0].Anzahl = 8;
             bestellpositionen[1].Anzahl = 5;
             bestellpositionen[2].Anzahl = 10;
 
-            // Umsetzungs-Variante 2 um Bestellpositionen-Liste zu füllen
-            var best1 = new Bestellung();
+            // alternative Umsetzung (Variante 2) um Bestellpositionen-Liste zu füllen (hier für Bestellungen)
             // statt best1.NeueBestellposition(); best1.SetzeBestellpositionsAnzahl(0, 8);
             best1.NeueBestellposition(8);
-            var best2 = new Bestellung();
             best2.NeueBestellposition(5);
             best2.NeueBestellposition(10);
+
 
             // Assoziationen
             lieferanten[0].LieferkonditionHinzufuegen(lieferkonditionen[0]);

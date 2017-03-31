@@ -8,10 +8,13 @@ namespace AS2_Lagerhaltung
 {
     class Artikel
     {
+        // Attribute
         private long artikel_nr;
         private string bezeichung;
         private long bestand;
         private long min_bestand;
+        
+        // Eigenschaften
         public long ArtikelNr { get; set; }
         public string Bezeichung { get; set; }
         public long Bestand { get; set; }
@@ -20,6 +23,7 @@ namespace AS2_Lagerhaltung
         // 1 Artikel -> * Bestellpositionen
         private List<Bestellposition> _bestellpositionen = new List<Bestellposition>();
 
+        // Methoden
         public void BestellpositionHinzufuegen(Bestellposition bestellposition)
         {
             _bestellpositionen.Add(bestellposition);

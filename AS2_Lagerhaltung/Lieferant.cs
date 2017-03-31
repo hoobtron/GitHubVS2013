@@ -8,9 +8,12 @@ namespace AS2_Lagerhaltung
 {
     class Lieferant
     {
+        // Attribute
         private string name;
         private string adresse;
         private string tel_nr;
+
+        // Eigenschaften
         public string Name { get; set; }
         public string Adresse { get; set; }
         public string TelNr { get; set; }
@@ -21,6 +24,7 @@ namespace AS2_Lagerhaltung
         // 1 Lieferant -> * Lieferkonditionen
         private List<Bestellung> _bestellungen = new List<Bestellung>();
 
+        // Methoden
         public void BestellungHinzufuegen(Bestellung bestellung)
         {
             _bestellungen.Add(bestellung);

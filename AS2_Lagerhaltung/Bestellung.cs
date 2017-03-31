@@ -36,6 +36,7 @@ namespace AS2_Lagerhaltung
             //NeueBestellposition();
         }
 
+        // Methoden
         public static int GetAnzahlAllerBestellungen()
         {
             return anzahlAllerBestellungen;

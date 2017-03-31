@@ -8,8 +8,10 @@ namespace AS2_Lagerhaltung
 {
     class Bestellposition
     {
-        //...
+        // Attribut
         private long anzahl;
+
+        // Eigenschaft
         public long Anzahl { get; set; }
 
     }
