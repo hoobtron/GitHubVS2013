@@ -22,10 +22,10 @@ namespace AS2_Lagerhaltung
                 lieferanten[i] = new Lieferant();
             lieferanten[0].Adresse = "Sonnenallee 195";
             lieferanten[0].Name = "Manfred Malter";
-            lieferanten[0].Tel_nr = "030/123405";
+            lieferanten[0].TelNr = "030/123405";
             lieferanten[1].Adresse = "Vinetastraße 17";
             lieferanten[1].Name = "Willi Waltner";
-            lieferanten[1].Tel_nr = "030/654321";
+            lieferanten[1].TelNr = "030/654321";
 
             for (var i = 0; i < lieferkonditionen.Length; i++)
                 lieferkonditionen[i] = new Lieferkondition();
@@ -40,18 +40,18 @@ namespace AS2_Lagerhaltung
 
             for (var i = 0; i < artikel.Length; i++)
                 artikel[i] = new Artikel();
-            artikel[0].Artikel_nr = 1001;
+            artikel[0].ArtikelNr = 1001;
             artikel[0].Bezeichung = "Artikel1";
             artikel[0].Bestand = 10;
-            artikel[0].Min_bestand = 2;
-            artikel[1].Artikel_nr = 1002;
+            artikel[0].MinBestand = 2;
+            artikel[1].ArtikelNr = 1002;
             artikel[1].Bezeichung = "Artikel2";
             artikel[1].Bestand = 7;
-            artikel[1].Min_bestand = 8;
-            artikel[2].Artikel_nr = 1003;
+            artikel[1].MinBestand = 8;
+            artikel[2].ArtikelNr = 1003;
             artikel[2].Bezeichung = "Artikel3";
             artikel[2].Bestand = 5;
-            artikel[2].Min_bestand = 5;
+            artikel[2].MinBestand = 5;
 
            for (var i = 0; i < bestellpositionen.Length; i++)
                bestellpositionen[i] = new Bestellposition();
@@ -67,7 +67,7 @@ namespace AS2_Lagerhaltung
             best2.NeueBestellposition(5);
             best2.NeueBestellposition(10);
 
-            // ...
+            // Assoziationen
             lieferanten[0].LieferkonditionHinzufuegen(lieferkonditionen[0]);
             lieferanten[0].LieferkonditionHinzufuegen(lieferkonditionen[1]);
             lieferanten[1].LieferkonditionHinzufuegen(lieferkonditionen[2]);
